@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import CTA from '../components/CTA.astro';
+
+const faqs = [
+  {
+    group: 'Product',
+    items: [
+      { q: 'What is LuxeDate?', a: 'AI-curated alerts for new restaurants, standout events, and luxury travel deals in San Diego—sent only when something is actually worth booking.' },
+      { q: 'Is this a newsletter?', a: 'Not really. It’s an alert system. Fewer messages, more action.' },
+      { q: 'How do you decide what’s “worth booking”?', a: 'We combine source signals (quality + relevance) with scoring and human taste checks. If it’s just hype, it won’t pass.' },
+    ]
+  },
+  {
+    group: 'Alerts',
+    items: [
+      { q: 'How often will you message me?', a: 'Beta frequency varies, but the default is low. You should never feel spammed.' },
+      { q: 'Can I set preferences?', a: 'Yes—neighborhoods, cuisines, vibe, and budget bands. Preferences improve ranking.' },
+      { q: 'Do you cover only San Diego?', a: 'For now, yes. We’d rather do one city exceptionally well.' },
+    ]
+  },
+  {
+    group: 'Pricing',
+    items: [
+      { q: 'Is it free?', a: 'During beta: free to join the waitlist. Paid tiers may come later.' },
+      { q: 'Can I pay now?', a: 'Not yet. This site doesn’t collect payments.' },
+    ]
+  },
+  {
+    group: 'Privacy',
+    items: [
+      { q: 'Do you sell my data?', a: 'No.' },
+      { q: 'What data do you store?', a: 'The info you provide (like email and preferences) plus basic analytics to improve the product.' },
+    ]
+  }
+];
+---
+<BaseLayout title="FAQ — LuxeDate" description="Frequently asked questions about LuxeDate." active="/faq">
+  <Section eyebrow="FAQ" title="Frequently asked questions" subtitle="Short answers, high signal.">
+    <div class="space-y-10">
+      {faqs.map((g) => (
+        <div>
+          <h2 class="text-lg font-semibold">{g.group}</h2>
+          <div class="mt-4 grid gap-4 md:grid-cols-2">
+            {g.items.map((item) => (
+              <Card>
+                <h3 class="text-base font-semibold">{item.q}</h3>
+                <p class="mt-2 text-sm text-white/70">{item.a}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12">
+      <CTA />
+    </div>
+  </Section>
+</BaseLayout>

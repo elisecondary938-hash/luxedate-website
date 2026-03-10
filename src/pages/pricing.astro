@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+import CTA from '../components/CTA.astro';
+---
+<BaseLayout title="Pricing — LuxeDate" description="Beta pricing and plan overview for LuxeDate." active="/pricing">
+  <Section eyebrow="PRICING" title="Pricing" subtitle="We’re in beta. Join free now—paid tiers are listed for transparency, not checkout.">
+    <div class="grid gap-4 lg:grid-cols-3">
+      <Card>
+        <p class="text-xs font-semibold tracking-[0.18em] text-white/60">WAITLIST</p>
+        <h2 class="mt-3 text-xl font-semibold">Free</h2>
+        <p class="mt-2 text-sm text-white/70">Early access when slots open.</p>
+        <ul class="mt-5 space-y-2 text-sm text-white/75">
+          <li>Preference capture</li>
+          <li>Occasional top picks roundups</li>
+          <li>Priority when openings drop</li>
+        </ul>
+        <div class="mt-6">
+          <Button href="/waitlist" variant="primary" size="lg">Join waitlist</Button>
+        </div>
+      </Card>
+
+      <Card class="border-champagne-500/30">
+        <p class="text-xs font-semibold tracking-[0.18em] text-champagne-500/90">LUXE</p>
+        <h2 class="mt-3 text-xl font-semibold">Beta Priority</h2>
+        <p class="mt-2 text-sm text-white/70">More alerts. More personalization. Same restraint.</p>
+        <ul class="mt-5 space-y-2 text-sm text-white/75">
+          <li>Higher-frequency alerts</li>
+          <li>Personalization tuned to taste</li>
+          <li>Worth-booking deal drops</li>
+          <li>Telegram delivery priority</li>
+        </ul>
+        <div class="mt-6">
+          <Button href="/waitlist#telegram" variant="teal" size="lg">Request Telegram beta</Button>
+        </div>
+      </Card>
+
+      <Card>
+        <p class="text-xs font-semibold tracking-[0.18em] text-white/60">BLACK</p>
+        <h2 class="mt-3 text-xl font-semibold">Concierge Waitlist</h2>
+        <p class="mt-2 text-sm text-white/70">Fewer, higher-stakes recommendations.</p>
+        <ul class="mt-5 space-y-2 text-sm text-white/75">
+          <li>Custom constraints (anniversary, dietary)</li>
+          <li>Hand-curated itineraries (limited)</li>
+          <li>White-glove level picks</li>
+        </ul>
+        <div class="mt-6">
+          <Button href="/waitlist" variant="secondary" size="lg">Join concierge waitlist</Button>
+        </div>
+      </Card>
+    </div>
+  </Section>
+
+  <Section eyebrow="STANDARD" title="What qualifies as “worth booking”" subtitle="A high bar, on purpose.">
+    <div class="grid gap-4 md:grid-cols-2">
+      <Card>
+        <h3 class="text-base font-semibold">Time sensitivity</h3>
+        <p class="mt-2 text-sm text-white/70">Limited availability or a window that closes quickly.</p>
+      </Card>
+      <Card>
+        <h3 class="text-base font-semibold">Quality signals</h3>
+        <p class="mt-2 text-sm text-white/70">Consistency from trusted sources—not just buzz.</p>
+      </Card>
+      <Card>
+        <h3 class="text-base font-semibold">Real value</h3>
+        <p class="mt-2 text-sm text-white/70">Price-to-value that’s genuinely above baseline.</p>
+      </Card>
+      <Card>
+        <h3 class="text-base font-semibold">Fit</h3>
+        <p class="mt-2 text-sm text-white/70">It matches your taste, vibe, and budget bands.</p>
+      </Card>
+    </div>
+    <div class="mt-10">
+      <CTA />
+    </div>
+  </Section>
+</BaseLayout>

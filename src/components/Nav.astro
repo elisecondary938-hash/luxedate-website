@@ -1,0 +1,24 @@
+---
+import Logo from './Logo.astro';
+import Button from './Button.astro';
+
+const { active = '' } = Astro.props;
+const linkBase = 'text-sm text-white/80 hover:text-white transition';
+const isActive = (href) => active === href;
+---
+<header class="sticky top-0 z-40 border-b border-white/5 bg-ink-950/70 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <Logo />
+
+    <nav class="hidden items-center gap-6 md:flex" aria-label="Primary">
+      <a class={`${linkBase} ${isActive('/#how-it-works') ? 'text-white' : ''}`} href="/#how-it-works">How it works</a>
+      <a class={`${linkBase} ${isActive('/pricing') ? 'text-white' : ''}`} href="/pricing">Pricing</a>
+      <a class={`${linkBase} ${isActive('/faq') ? 'text-white' : ''}`} href="/faq">FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a class="hidden text-sm text-white/70 hover:text-white md:inline-flex" href="/waitlist#telegram">Telegram beta</a>
+      <Button href="/waitlist" variant="primary" size="sm">Join waitlist</Button>
+    </div>
+  </div>
+</header>

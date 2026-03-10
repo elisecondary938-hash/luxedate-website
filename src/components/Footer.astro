@@ -1,0 +1,28 @@
+---
+import Logo from './Logo.astro';
+---
+<footer class="border-t border-white/5">
+  <div class="mx-auto max-w-6xl px-4 py-10">
+    <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+      <div class="space-y-3">
+        <Logo class="opacity-90" />
+        <p class="max-w-sm text-sm text-white/60">AI-curated San Diego alerts for restaurants, events, and luxury travel deals—only when something is actually worth booking.</p>
+        <p class="text-xs text-white/40">© {new Date().getFullYear()} LuxeDate. All rights reserved.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-6 text-sm">
+        <div class="space-y-2">
+          <p class="text-white/80">Company</p>
+          <a class="block text-white/60 hover:text-white" href="/pricing">Pricing</a>
+          <a class="block text-white/60 hover:text-white" href="/faq">FAQ</a>
+          <a class="block text-white/60 hover:text-white" href="/waitlist">Waitlist</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-white/80">Legal</p>
+          <a class="block text-white/60 hover:text-white" href="/privacy">Privacy</a>
+          <a class="block text-white/60 hover:text-white" href="/terms">Terms</a>
+          <a class="block text-white/60 hover:text-white" href="mailto:support@luxedate.example">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

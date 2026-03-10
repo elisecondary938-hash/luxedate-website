@@ -1,0 +1,30 @@
+---
+const {
+  href,
+  variant = 'primary',
+  size = 'md',
+  type = 'button',
+} = Astro.props;
+
+const base = 'inline-flex items-center justify-center rounded-xl font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950 disabled:opacity-50 disabled:cursor-not-allowed';
+
+const variants = {
+  primary: 'bg-champagne-500 text-ink-950 shadow-[0_12px_36px_-18px_rgba(216,179,106,0.9)] hover:brightness-110',
+  secondary: 'bg-white/8 text-white border border-white/10 hover:bg-white/12',
+  teal: 'bg-ocean-500 text-ink-950 shadow-[0_12px_36px_-18px_rgba(86,199,199,0.9)] hover:brightness-110',
+  ghost: 'text-white/90 hover:bg-white/8'
+};
+
+const sizes = {
+  sm: 'px-3 py-2 text-sm',
+  md: 'px-4 py-2.5 text-sm',
+  lg: 'px-5 py-3 text-base'
+};
+
+const cls = `${base} ${variants[variant]} ${sizes[size]}`;
+---
+{href ? (
+  <a class={cls} href={href}><slot /></a>
+) : (
+  <button class={cls} type={type}><slot /></button>
+)}

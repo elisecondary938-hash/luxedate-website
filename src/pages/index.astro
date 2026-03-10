@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+import CTA from '../components/CTA.astro';
+import AlertCard from '../components/AlertCard.astro';
+---
+<BaseLayout title="LuxeDate — San Diego curated alerts" description="AI-curated alerts for new restaurants, standout events, and luxury travel deals in San Diego—only when something is actually worth booking." active="/">
+  <!-- Hero -->
+  <section class="py-16 md:py-24">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="grid items-center gap-10 md:grid-cols-12">
+        <div class="md:col-span-7">
+          <p class="text-xs font-semibold tracking-[0.18em] text-champagne-500/90">SAN DIEGO • HIGH SIGNAL</p>
+          <h1 class="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">Curated, not cluttered.</h1>
+          <p class="mt-5 max-w-xl text-lg text-white/70">LuxeDate sends AI-curated alerts for new restaurants, standout events, and luxury travel deals—only when something is actually worth booking.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Button href="/waitlist" variant="primary" size="lg">Join the waitlist</Button>
+            <Button href="/waitlist#telegram" variant="teal" size="lg">Request Telegram beta</Button>
+          </div>
+          <p class="mt-4 text-sm text-white/60">No spam. Few alerts. High signal.</p>
+        </div>
+        <div class="md:col-span-5">
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_50px_120px_-80px_rgba(0,0,0,0.95)]">
+            <p class="text-sm font-medium text-white/80">Tonight’s picks (example)</p>
+            <div class="mt-4 space-y-3">
+              <div class="rounded-2xl border border-white/10 bg-ink-800/60 p-4">
+                <p class="text-xs font-semibold tracking-[0.18em] text-champagne-500/90">RESTAURANT</p>
+                <p class="mt-2 text-sm font-semibold">Leila — soft opening</p>
+                <p class="mt-1 text-sm text-white/60">North Park • Modern Mediterranean</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-ink-800/60 p-4">
+                <p class="text-xs font-semibold tracking-[0.18em] text-champagne-500/90">EVENT</p>
+                <p class="mt-2 text-sm font-semibold">Candlelight Jazz at The Rady Shell</p>
+                <p class="mt-1 text-sm text-white/60">Fri–Sat • Limited seating</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-ink-800/60 p-4">
+                <p class="text-xs font-semibold tracking-[0.18em] text-champagne-500/90">TRAVEL</p>
+                <p class="mt-2 text-sm font-semibold">Alila Marea — 30% off select dates</p>
+                <p class="mt-1 text-sm text-white/60">North County Coast</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signal > noise -->
+  <Section eyebrow="WHY" title="The opposite of “another deals newsletter.”" subtitle="If there’s nothing worth booking, you won’t hear from us.">
+    <div class="grid gap-4 md:grid-cols-3">
+      <Card>
+        <h3 class="text-base font-semibold">Fewer alerts, better timing.</h3>
+        <p class="mt-2 text-sm text-white/70">We message when availability matters—not when content needs filling.</p>
+      </Card>
+      <Card>
+        <h3 class="text-base font-semibold">Curated for taste.</h3>
+        <p class="mt-2 text-sm text-white/70">We filter out hype and prioritize quality signals and consistency.</p>
+      </Card>
+      <Card>
+        <h3 class="text-base font-semibold">San Diego-first.</h3>
+        <p class="mt-2 text-sm text-white/70">Built for locals and visitors who book the good stuff.</p>
+      </Card>
+    </div>
+  </Section>
+
+  <!-- What you get -->
+  <Section eyebrow="ALERTS" title="Three kinds of alerts—one standard." subtitle="Short, actionable, and ready to book.">
+    <div class="grid gap-4 md:grid-cols-3">
+      <Card>
+        <h3 class="text-base font-semibold">New restaurants worth the reservation</h3>
+        <p class="mt-2 text-sm text-white/70">Soft opens, hard-to-book tables, and genuinely exceptional new spots.</p>
+      </Card>
+      <Card>
+        <h3 class="text-base font-semibold">Events you’ll actually want to go to</h3>
+        <p class="mt-2 text-sm text-white/70">Limited runs, chef collabs, cultural nights, date-worthy experiences.</p>
+      </Card>
+      <Card>
+        <h3 class="text-base font-semibold">Luxury travel deals (when they’re real)</h3>
+        <p class="mt-2 text-sm text-white/70">San Diego departures, premium stays, and high-value drops—curated.</p>
+      </Card>
+    </div>
+  </Section>
+
+  <!-- How it works -->
+  <Section id="how-it-works" eyebrow="FLOW" title="Simple." subtitle="Tell us what you like. We do the scanning. You get the alert.">
+    <div class="grid gap-4 md:grid-cols-3">
+      <Card>
+        <p class="text-xs font-semibold tracking-[0.18em] text-white/60">STEP 01</p>
+        <h3 class="mt-2 text-base font-semibold">Tell us what you like</h3>
+        <p class="mt-2 text-sm text-white/70">Neighborhoods, cuisines, vibe, budget bands.</p>
+      </Card>
+      <Card>
+        <p class="text-xs font-semibold tracking-[0.18em] text-white/60">STEP 02</p>
+        <h3 class="mt-2 text-base font-semibold">We scan + score</h3>
+        <p class="mt-2 text-sm text-white/70">Signals from trusted sources, then AI ranking.</p>
+      </Card>
+      <Card>
+        <p class="text-xs font-semibold tracking-[0.18em] text-white/60">STEP 03</p>
+        <h3 class="mt-2 text-base font-semibold">You get the alert</h3>
+        <p class="mt-2 text-sm text-white/70">Short, actionable, and ready to book.</p>
+      </Card>
+    </div>
+    <div class="mt-10">
+      <CTA />
+    </div>
+  </Section>
+
+  <!-- Sample alerts -->
+  <Section id="sample-alerts" eyebrow="PREVIEW" title="Example alerts" subtitle="Designed for fast decisions.">
+    <div class="grid gap-4 md:grid-cols-3">
+      <AlertCard kind="Restaurant" title="NEW: Leila (soft opening)" meta="North Park • Modern Mediterranean • $$–$$$" why={[
+        'Early menu is getting real praise (not influencer fluff)',
+        'Small dining room → reservations tighten fast'
+      ]} cta1="Book" cta2="Save" />
+      <AlertCard kind="Event" title="DATE-NIGHT: Candlelight Jazz at The Rady Shell" meta="This Fri–Sat • Limited seating" why={[
+        'Strong lineup + rare setting',
+        'One message → one plan kind of night'
+      ]} cta1="Tickets" cta2="Remind" />
+      <AlertCard kind="Travel" title="DEAL DROP: 2 nights at Alila Marea — 30% off" meta="North County Coast • Select dates" why={[
+        'Real value vs typical pricing',
+        'Ocean-view rooms still available (for now)'
+      ]} cta1="View" cta2="Dates" />
+    </div>
+  </Section>
+
+  <!-- Social proof -->
+  <Section eyebrow="FOR" title="Built for people who hate searching." subtitle="If you’ve ever opened 15 tabs to plan one night out—LuxeDate is for you.">
+    <div class="grid gap-4 md:grid-cols-3">
+      <Card>
+        <p class="text-sm text-white/70">San Diego-first focus</p>
+        <p class="mt-2 text-2xl font-semibold">One city, done exceptionally well.</p>
+      </Card>
+      <Card>
+        <p class="text-sm text-white/70">High-signal philosophy</p>
+        <p class="mt-2 text-2xl font-semibold">Restraint is the feature.</p>
+      </Card>
+      <Card>
+        <p class="text-sm text-white/70">Designed for action</p>
+        <p class="mt-2 text-2xl font-semibold">Short alerts. Fast booking.</p>
+      </Card>
+    </div>
+  </Section>
+
+  <!-- Pricing preview -->
+  <Section eyebrow="PRICING" title="Pricing built for early access." subtitle="Start free during beta. Upgrade later if you want higher frequency and concierge-style picks.">
+    <div class="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/10 bg-white/5 p-8 md:flex-row md:items-center">
+      <div class="max-w-xl">
+        <p class="text-sm text-white/70">Paid tiers are shown for transparency—this site doesn’t collect payments.</p>
+      </div>
+      <div class="flex w-full flex-col gap-2 sm:w-auto sm:flex-row">
+        <Button href="/pricing" variant="secondary" size="lg">See pricing</Button>
+        <Button href="/waitlist" variant="primary" size="lg">Join waitlist</Button>
+      </div>
+    </div>
+  </Section>
+
+  <section class="pb-20">
+    <div class="mx-auto max-w-6xl px-4">
+      <CTA />
+    </div>
+  </section>
+</BaseLayout>
